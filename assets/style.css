@@ -1,7 +1,7 @@
 body {
     background-image: url("images/the-white-house.jpg");
     background-size: cover;
-    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 #main-box{

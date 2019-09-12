@@ -11,15 +11,15 @@ function displayPresidentInfo() {
   }).then(function (response) {
     console.log(response);
     var results = response.data;
-    for (var i = 0; i < results.length; i++){
-    var presDiv = $("<div class='president'>");
-    var imgRating = response.data[i].rating;
-    var firstP = $("<p>").text("Rated: " + imgRating);
-    presDiv.append(firstP);
-    var imgUrl = response.data[i].images.fixed_height.url;
-    var image = $("<img>").attr("src", imgUrl);
-    presDiv.append(image);
-    $("#presidential-view").prepend(presDiv);
+    for (var i = 0; i < results.length; i++) {
+      var presDiv = $("<div class='president'>");
+      var imgRating = response.data[i].rating;
+      var firstP = $("<p>").text("Rated: " + imgRating);
+      presDiv.append(firstP);
+      var imgUrl = response.data[i].images.fixed_height.url;
+      var image = $("<img>").attr("src", imgUrl);
+      presDiv.append(image);
+      $("#presidential-view").prepend(presDiv);
     }
   });
 
@@ -33,7 +33,8 @@ function renderButtons() {
     newPres.attr("data-name", presidents[i]);
     newPres.text(presidents[i]);
     $("#buttons-view").append(newPres);
-}};
+  }
+};
 
 $("#add-president").on("click", function (event) {
   event.preventDefault();
